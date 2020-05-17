@@ -31,8 +31,7 @@ def convert():
     contact1=request.form.get("contact1")
     contact2=request.form.get("contact2")
     if contact1!=session['var']:
-        flash('Use your own id','error')
-        return redirect(url_for('main.add'))
+        return jsonify({"success":False})
     person2=User.query.filter_by(idapp=int(contact2)).first()
     person=User.query.filter_by(idapp=int(contact1)).first()
     if(person.color!="G" or person2.color!="G" or person2==None):
