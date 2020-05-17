@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, redirect, url_for, request,jsonify,flash
+from flask import Blueprint, render_template, redirect, url_for, request,jsonify,flash,session
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import login_user, logout_user, login_required
 from coronatracer.extensions import db
@@ -14,6 +14,7 @@ def index():
 @main.route('/profile/<id>',methods=["POST","GET"])
 @login_required
 def profile(id):
+    session['var']=id
     person=User.query.filter_by(idapp=id).first()
     if person.color=="R":
         return render_template('profiler.html',name=person.name)
@@ -52,6 +53,10 @@ def update():
     if request.method=="POST":
         color=request.form["btn"]
         id=request.form["id1"]
+        k=session['var']
+        if id!=k:
+            flash('Use your own id','error')
+            return redirect(url_for('main.update'))
         if color=="G":
             person=User.query.filter_by(idapp=int(id)).first()
             if person.color=="O":

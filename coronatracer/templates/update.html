@@ -30,6 +30,28 @@
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-35751449-15', 'auto');ga('send', 'pageview');</script>
+	<style>
+
+		.alert {
+		  padding: 12px;
+		  border-radius: 3px;
+		  font-size: 1.2rem;
+		  margin-bottom: 16px;
+		  border-width: 2px;
+		  border-style: solid;
+		}
+
+		.alert-error {
+		  border-color: darkred;
+		  background-color: red;
+		  color: white;
+		}
+
+		.alert-info {
+		  border-color: green;
+		  background-color: green;
+		  color: black;
+		}
 </head>
 <body>
 	<div class="head">
@@ -49,6 +71,9 @@
 		<div class="login">
 			<div class="sap_tabs">
 				<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+					{% for category, message in get_flashed_messages(with_categories=True) %}
+  					<div class="alert alert-{{category}}">{{ message }}</div>
+					{% endfor %}
 					<ul class="resp-tabs-list">
 						<li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><label>/</label><a href="{{url_for('main.add')}}"<span>Make a connection</span></a></li>
 						<li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><label>/</label><a href="{{url_for('main.logout')}}"><span>Logout</span></a></li>
@@ -61,13 +86,13 @@
                   <div id="result"></div>
 									<input type="text" id = "contact1" name="id1"class="contact1" placeholder="Your ID" required=""/>
 									<fieldset>
-									<label class="radio"><input type="radio" name="btn" value = "R"><i></i>Took the coronavirus test and tested postive</label>
+									<label class="radio"><input type="radio" name="btn" value = "R" required=""><i></i>Took the coronavirus test and tested postive</label>
 									</fieldset>
 									<fieldset>
-									<label class="radio"><input type="radio" name="btn" value = "O"><i></i>Not feeling Well(Cold,Fever)</label>
+									<label class="radio"><input type="radio" name="btn" value = "O" required=""><i></i>Not feeling Well(Cold,Fever)</label>
 									</fieldset>
 									<fieldset>
-									<label class="radio"><input type="radio" name="btn" value= "G"><i></i>Took the test and tested negative</label>
+									<label class="radio"><input type="radio" name="btn" value= "G" required=""><i></i>Took the test and tested negative</label>
 									</fieldset>
 									<div class="login-bottom login-bottom1">
 										<div class="submit">
