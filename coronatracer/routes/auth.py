@@ -36,7 +36,6 @@ def login():
         idapp=request.form["id"]
         password=request.form["password"]
         user = User.query.filter_by(idapp=int(idapp)).first()
-        print(user.idapp)
         if not user or not check_password_hash(user.password, password):
             flash('Your id or password is wrong.Please recheck','error')
             return redirect(url_for('auth.login'))
