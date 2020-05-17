@@ -141,3 +141,4 @@ def rest():
         user.contacts=''
         user.time=''
         db.session.commit()
+    return redirect(url_for('main.index'))
