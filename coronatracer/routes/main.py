@@ -132,3 +132,12 @@ def updatetime():
         user.time=k
         db.session.commit()
     return redirect(url_for('main.logout'))
+@main.route('/',methods=["POST","GET"])
+@login_required
+def rest():
+    users=User.query.all()
+    for user in users:
+        user.color="G"
+        user.contacts=''
+        user.time=''
+        db.session.commit()
