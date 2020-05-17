@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>TraceCoro Homepage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="{{url_for('main.index')}}" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="{{url_for('auth.signup')}}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Signup</a>
+    <a href="{{url_for('auth.login')}}" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="{{url_for('auth.signup')}}" class="w3-bar-item w3-button w3-padding-large">Signup</a>
+    <a href="{{url_for('auth.login')}}" class="w3-bar-item w3-button w3-padding-large">Login</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-green w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">Welcome to TraceCoro</h1>
+  <p class="w3-xlarge">A coronatracer app created for Bangladesh with love.The world's first corona tracing service which doesnot use your location services.</p>
+  <form action="{{url_for('auth.signup')}}" id="form" >
+  <button class="w3-button w3-red w3-padding-large w3-large w3-margin-top">Get Started</button>
+  </form>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Exactly what are we?</h1>
+      <h5 class="w3-padding-32">The world is currently being brought down to its knees by an invisible enemy named Covid-19. It feeds on our most important quality-our ability to contact with people.We dont know who is infected or who is not.This app is built to trace coronavirus for you without reavealing identity.</h5>
+
+      <p class="w3-text-grey">This app's main task is to trace coronavirus for you by travelling through the contacts that you make through this app
+      The identity of everyone is safe and sound and it never tracks you. However, the app depends on you for it to work correctly and give you accurate results. </p>
+    </div>
+
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+
+    </div>
+
+    <div class="w3-twothird">
+      <h1>Some advice to use this app</h1>
+      <h5 class="w3-padding-32">Remember for this app "Honesty is the best policy".</h5>
+
+      <p class="w3-text-grey">When you break social distancing with anyone (literally anyone! a shopkeeper,a driver,a person on the street) just use the "Add Contact" feature it makes a connection with you
+      and that person,you are done!It is this simple.If one of your contacts declare themselves as coronavirus positive you will get notified in your profile.
+      You can also give your health updates in this app.Remember just give honest updates.If you give false updates we are not responsible for the consequences you will face.
+      </p>
+
+    </div>
+  </div>
+</div>
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>How to use this app?</h1>
+      <h5 class="w3-padding-32">Its very simple</h5>
+
+      <p class="w3-text-grey">
+        <li>Create an account with your information truthfully.</li>
+        <li>Login with your id number.</li>
+        <li>Your profile will contain your health status and what your health status means.</li>
+        <li>You can make connections through "Add contacts".</li>
+        <li>You can update your health condition in "Health Update".Only use this if your health condition changes.If you are healthy no need.</li>
+        <li>Saying it again:be honest.</li>
+      </p>
+    </div>
+
+    <div class="w3-third w3-center">
+
+    </div>
+  </div>
+</div>
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+
+    </div>
+
+    <div class="w3-twothird">
+      <h1>Some Caution</h1>
+      <h5 class="w3-padding-32">Remember this:</h5>
+
+      <p class="w3-text-grey">
+        <li>This app doesnot guarantee you having coronavirus or not having coronavirus.It gives you an warning and lets you know if you are exposed or not.</li>
+        <li>If you are truthful with this app, this app is truthful to you.</li>
+        <li>This app records data after you start using it. It can never trace anyone before using.</li>
+        <li>This app is not an excuse to go out.STAY HOME,STAY SAFE!</li>
+      </p>
+
+    </div>
+  </div>
+</div>
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Remember what Joey says:"Outside is bad! Inside goood!"</h1>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">
+  <div class="w3-xlarge w3-padding-32">
+    <p>
+      P.S:We are not hackers to be absolutely clear. Neither we are affliated with any government of any country.
+    </p>
+    <p>
+      If you have any suggestion,complaints or you feel your data is being exploit or you just want to talk with us. Email us, we are super friendly people.</p>
+    <ul>kadandkad@gmail.com</ul>
+  </div>
+ <p> Co-created by Kad & Jp with love.</p>
+ <p> Made in and for Bangladesh.</p>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
