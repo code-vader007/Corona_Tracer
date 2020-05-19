@@ -25,7 +25,7 @@
         "sizes": "512x512"
       }
   ],
-  "start_url": "/",
+  "start_url": "/templates/index3.html",
   "display": "standalone",
   "orientation": "portrait"
 }
