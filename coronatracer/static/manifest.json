@@ -1,0 +1,31 @@
+{
+  "name": "TraceCoro",
+  "short_name": "TraceCoro",
+  "theme_color": "#CBD394",
+  "background_color": "#F1F7C6",
+  "icons": [
+      {
+        "src": "/static/img/icon-56.png",
+        "type": "image/png",
+        "sizes": "56x56"
+      },
+      {
+        "src": "/static/img/icon-128.png",
+        "type": "image/png",
+        "sizes": "128x128"
+      },
+      {
+        "src": "/static/img/icon-256.png",
+        "type": "image/png",
+        "sizes": "256x256"
+      },
+      {
+        "src": "/static/img/icon-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}

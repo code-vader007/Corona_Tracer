@@ -24,21 +24,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
 </style>
 <body>
-  <script>
-  // Register Service Worker
-  if ('serviceWorker' in navigator) {
-      navigator.serviceWorker
-      .register('/static/service-worker.js')
-      .then(function(registration) {
-          console.log('Service Worker Registered!');
-          return registration;
-      })
-      .catch(function(err) {
-          console.error('Unable to register service worker.', err);
-      });
-  }
-
-  </script>
 
 <!-- Navbar -->
 <div class="w3-top">

@@ -11,6 +11,10 @@ main = Blueprint('main',__name__)
 def index():
     return render_template('index3.html')
 
+@main.route('/service-worker.js')
+def sw():
+    return main.send_static_file('service-worker.js')
+
 @main.route('/profile/<id>',methods=["POST","GET"])
 @login_required
 def profile(id):
