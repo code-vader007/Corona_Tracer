@@ -20,7 +20,7 @@
         "sizes": "512x512"
       }
   ],
-  "start_url": "//tracecoro.herokuapp.com",
+  "start_url": ".",
   "display": "standalone",
   "orientation": "portrait"
 }

@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+
   <!-- iOS -->
 <link rel="apple-touch-icon"                       href="{{ url_for('static', filename='img/icon-128.png') }}">
 <meta name="apple-mobile-web-app-capable"          content="yes">
@@ -26,21 +27,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </style>
 </head>
 <body>
-  <script>
-  // Register Service Worker
-  if ('serviceWorker' in navigator) {
-      navigator.serviceWorker
-      .register('/static/service-worker.js')
-      .then(function(registration) {
-          console.log('Service Worker Registered!');
-          return registration;
-      })
-      .catch(function(err) {
-          console.error('Unable to register service worker.', err);
-      });
-  }
 
-  </script>
 
 <!-- Navbar -->
 <div class="w3-top">
@@ -171,6 +158,18 @@ function myFunction() {
   }
 }
 </script>
-
+<script>
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+    .register('/static/service-worker.js')
+    .then(function(registration) {
+        console.log('Service Worker Registered!');
+        return registration;
+    })
+    .catch(function(err) {
+        console.error('Unable to register service worker.', err);
+    });
+}
+</script>
 </body>
 </html>
