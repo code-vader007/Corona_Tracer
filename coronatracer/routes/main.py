@@ -10,7 +10,9 @@ main = Blueprint('main',__name__)
 @main.route('/')
 def index():
     return render_template('index3.html')
-
+@main.route('/manifest.json',methods=["POST","GET"])
+def manifest():
+    return send_from_directory('static', 'manifest.json')
 @main.route('/service-worker.js',methods=["POST","GET"])
 def sw():
     return send_from_directory('static', 'service-worker.js')
