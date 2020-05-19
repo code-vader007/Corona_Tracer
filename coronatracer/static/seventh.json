@@ -1,8 +1,8 @@
 {
   "name": "TraceCoro",
   "short_name": "TraceCoro",
-  "theme_color": "#CBD394",
-  "background_color": "#F1F7C6",
+  "theme_color": "#000033",
+  "background_color": "#000033",
   "start_url": "https://tracecoro.herokuapp.com/",
   "scope":"/",
   "display": "standalone",
