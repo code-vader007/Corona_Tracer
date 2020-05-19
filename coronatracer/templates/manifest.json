@@ -3,6 +3,10 @@
   "short_name": "TraceCoro",
   "theme_color": "#CBD394",
   "background_color": "#F1F7C6",
+  "start_url": "/index3.html",
+  "scope":"/",
+  "display": "standalone",
+  "orientation": "portrait",
   "icons": [
       {
         "src": "/static/img/icon-128.png",
@@ -19,8 +23,6 @@
         "type": "image/png",
         "sizes": "512x512"
       }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "orientation": "portrait"
+  ]
+
 }

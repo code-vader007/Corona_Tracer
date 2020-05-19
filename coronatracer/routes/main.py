@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, redirect, url_for, request,jsonify,flash,session
+from flask import Blueprint, render_template, redirect, url_for, request,jsonify,flash,session,make_response,send_from_directory
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import login_user, logout_user, login_required
 from coronatracer.extensions import db
@@ -13,7 +13,7 @@ def index():
 
 @main.route('/service-worker.js')
 def sw():
-    return main.send_static_file('service-worker.js')
+    return send_from_directory('static', 'service-worker.js')
 
 @main.route('/profile/<id>',methods=["POST","GET"])
 @login_required
