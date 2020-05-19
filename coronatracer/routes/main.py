@@ -11,7 +11,7 @@ main = Blueprint('main',__name__)
 def index():
     return render_template('index3.html')
 
-@main.route('/service-worker.js')
+@main.route('/service-worker.js',methods=["POST","GET"])
 def sw():
     return send_from_directory('static', 'service-worker.js')
 
