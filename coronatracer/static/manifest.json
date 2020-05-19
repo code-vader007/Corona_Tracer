@@ -3,8 +3,7 @@
   "short_name": "TraceCoro",
   "theme_color": "#CBD394",
   "background_color": "#F1F7C6",
-  "start_url": "./",
-  "scope":".",
+  "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
   "icons": [
