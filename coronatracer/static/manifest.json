@@ -5,14 +5,9 @@
   "background_color": "#F1F7C6",
   "icons": [
       {
-        "src": "/static/img/icon-56.png",
-        "type": "image/png",
-        "sizes": "56x56"
-      },
-      {
         "src": "/static/img/icon-128.png",
         "type": "image/png",
-        "sizes": "128x128"
+        "sizes": "192x192"
       },
       {
         "src": "/static/img/icon-256.png",
@@ -25,7 +20,7 @@
         "sizes": "512x512"
       }
   ],
-  "start_url": "/",
+  "start_url": "https://tracecoro.herokuapp.com/",
   "display": "standalone",
   "orientation": "portrait"
 }
